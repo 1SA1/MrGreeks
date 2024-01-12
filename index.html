@@ -23,6 +23,7 @@
             font-weight: 500;
         }
 
+
         /* Add your custom styles here */
         .hero-section {
             background-image: linear-gradient(140deg, #2b3990 0%, rgba(255, 255, 255, 0.76) 100%), url('https://img.freepik.com/free-photo/smiling-woman-showing-laptop_23-2147626307.jpg?w=996&t=st=1705061670~exp=1705062270~hmac=322e3a7355e646ca80fd4f975b10c34a5dfe8d626f2b1a669a40bba14a76e422');
@@ -36,7 +37,25 @@
         .hero-text {
             width: 53.25%;
         }
-
+        @media (max-width: 767px) {
+            .hero-text {
+            width: 67.25%;
+           
+        }
+        h1{
+                font-family: 'IBM Plex Sans Condensed',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    font-size: 6vw;
+    color: #FFFFFF!important;
+    line-height: 1.2em;
+    text-shadow: 0em 0.1em 0.1em rgba(0,0,0,0.4);
+            }
+            p.lead{
+             
+            font-size: 14px !important;
+      margin-bottom: 15px !important;
+            }
+        }
         h1.display-4 {
             font-family: 'IBM Plex Sans Condensed', 'Helvetica', 'Arial', 'Lucida', sans-serif;
             font-weight: 700;
@@ -60,14 +79,20 @@
         }
 
         .container-fluid1 {
-            background-image:  url('https://geek-mobile.com.au/wp-content/uploads/2022/09/eed315c94e949729cfaeb5103f3ec7b5.png');
+            background-image: url('https://geek-mobile.com.au/wp-content/uploads/2022/09/eed315c94e949729cfaeb5103f3ec7b5.png');
             background-size: cover;
             background-position: center;
         }
+
         .container-fluid2 {
-            background-image:  url('https://img.freepik.com/free-photo/modern-laptop-white-background-3d-rendering-computer-generated-image_1142-50487.jpg?t=st=1705074736~exp=1705078336~hmac=93e13296a55054be1d6e622f3ef5aa34edfb7d61e747598fa79d9e6040a6ea2a&w=740');
+            background-image: url('https://img.freepik.com/free-photo/modern-laptop-white-background-3d-rendering-computer-generated-image_1142-50487.jpg?t=st=1705074736~exp=1705078336~hmac=93e13296a55054be1d6e622f3ef5aa34edfb7d61e747598fa79d9e6040a6ea2a&w=740');
             background-size: cover;
             background-position: center;
+            padding: 50px 20px 50px 20px;
+            line-height: 2em;
+            font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
+            font-size: 16px;
+            line-height: 2em;
         }
 
 
@@ -155,10 +180,26 @@
         .logo {
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 60% !important;
             transform: translate(-50%, -50%);
             opacity: 0;
             animation: moveRight 1s ease-out 3s forwards, rotate 2s linear 3s forwards;
+        }
+
+        @media (max-width: 767px) {
+
+            /* Styles for screens smaller than 768 pixels (mobile devices) */
+            .logo {
+                position: relative;
+                top: auto;
+                left: auto  !important;
+                transform: none;
+                text-align: center;
+                opacity: 1;
+                /* Adjust opacity for mobile view if needed */
+                animation: none;
+                /* Remove animation on smaller screens if not necessary */
+            }
         }
 
         @keyframes moveRight {
@@ -208,19 +249,39 @@
         }
 
         .card2 {
-            border-radius: 10px;
-            padding: 10px 50px;
-            box-shadow: 0px 46px 47px 0px #fbb040 !important;
-        }
+    border-radius: 10px;
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    box-shadow: 0px 46px 47px 0px #fbb040 !important;
+    background: #fff;
+    margin-top: -50px;
+    text-align: center; /* Center the text */
+}
 
-        .card1 {
-            border-radius: 10px;
-            padding: 30px 50px;
-            background-image: linear-gradient(137deg, #fbb040 0%, #ffffff 100%);
-            box-shadow: 0px 56px 56px -24px #2b3990 !important;
-            margin-left: -46px;
-    margin-top: -14px;
+.card1 {
+    border-radius: 10px;
+    padding: 20px 20px 80px 20px; /* Adjust padding for smaller screens */
+    background-image: linear-gradient(137deg, #fbb040 0%, #ffffff 100%);
+    box-shadow: 0px 36px 36px -16px #2b3990 !important; /* Adjust box shadow for smaller screens */
+    margin-left: 0;
+    margin-top: -40px; /* Adjust margin for smaller screens */
+    text-align: center; /* Center the text */
+}
 
+@media (max-width: 767px) {
+    .card1,
+    .card2 {
+        margin-top: 0 !important;
+        width: 100%; /* Adjust the width as needed */
+        margin: 10px auto; /* Center the elements horizontally */
+    }
+}
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 20px; /* Adjust the margin as needed */
+    }
+}
+        a {
+            font-weight: 600;
         }
 
         .card::after {
@@ -249,32 +310,35 @@
             color: white;
             background: #007bff;
         }
-        .list-group-item{
+
+        .list-group-item {
             background: transparent;
         }
+
         .star-rating {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #f1c40f; /* Yellow color for the stars */
-}
+            position: absolute;
+            top: 0;
+            left: 20px;
+            bottom: 1px;
+            color: #f1c40f;
+            /* Yellow color for the stars */
+        }
 
-.star {
-    font-size: 1.5em;
-}
-/* Add this to your existing styles */
-.custom-input {
-    -webkit-appearance: none;
-    background-color: #eee;
-    width: 100%;
-    border-width: 0;
-    border-radius: 0;
-    color: #999;
-    font-size: 14px;
-    padding: 16px;
-}
+        .star {
+            font-size: 1.9em;
+        }
 
-
+        /* Add this to your existing styles */
+        .custom-input {
+            -webkit-appearance: none;
+            background-color: #eee;
+            width: 100%;
+            border-width: 0;
+            border-radius: 0;
+            color: #999;
+            font-size: 14px;
+            padding: 16px;
+        }
     </style>
 </head>
 
@@ -297,7 +361,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <!-- Your logo goes here -->
-                <img src="https://mrgeeks.com.au/img/logo.png" alt="Your Logo" width="80">
+                <img src="https://mrgeeks.com.au/img/logo.png" alt="Your Logo" width="60">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -306,8 +370,8 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <!-- Add your navigation links here -->
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">GEEKMOBILE PRIVACY POLICY</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
                 </ul>
             </div>
         </div>
@@ -316,6 +380,7 @@
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="container">
+
             <div class="hero-text">
                 <h1 class="display-4">Join 70k+ Happy Clients</h1>
                 <p class="lead">Your hero subheading</p>
@@ -326,8 +391,11 @@
                     <button class="btn btn-info">Get The App</button>
                 </div>
             </div>
+            <img src="https://mrgeeks.com.au/img/logo.png" class="logo img-fluid text-center" alt="Your Logo"
+                width="250">
+
         </div>
-        <img src="https://mrgeeks.com.au/img/logo.png" class="logo" alt="Your Logo" width="150">
+
     </div>
 
     <!-- Pricing Section -->
@@ -335,37 +403,48 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 mb-6">
-                    <div class="card2 h-300 shadow-lg">
+                    <div class="card2 h-1000 shadow-lg">
                         <div class="card-body">
                             <div class="text-center p-3">
-                                <h5 class="card-title">Standard</h5>
-                                <small>Small Business</small>
+
+                                <small>OUR 100%</small>
                                 <br><br>
-                                <span class="h2">$20</span>/month
-                                <br><br>
+                                <span class="h2">Guarantee
                             </div>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg> Cras justo odio</li>
+                                </svg> Same Day = Same Price</li>
                             <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg> Dapibus ac facilisis in</li>
-                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                </svg> No Fix, No Fee</li>
+                            <li class="list-group-item" style=" text-decoration: line-through;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-check" viewBox="0 0 16 16">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg> Vestibulum at eros</li>
+                                </svg> Credit Card Surcharge</li>
+                            <li class="list-group-item" style=" text-decoration: line-through;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Call Out Fee</li>
+                            <li class="list-group-item" style=" text-decoration: line-through;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Cancellation Fee</li>
                         </ul>
                         <div class="card-body text-center">
-                            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                            <button class="btn btn-light btn-lg" style="background:#fbb040">Select</button>
                         </div>
                     </div>
                 </div>
@@ -373,45 +452,54 @@
                     <div class="card1 h-100 shadow-lg">
                         <div class="card-body">
                             <div class="text-center p-3">
-                                <h5 class="card-title">Premium</h5>
-                                <small>Large Companies</small>
+
+                                <small>REMOTE AVAILABLE FROM $68</small>
                                 <br><br>
-                                <span class="h2">$40</span>/month
-                                <br><br>
+                                <span class="h2">ONSITE
+                                    <br><br>
                             </div>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg> Cras justo odio</li>
+                                </svg> We Come To You</li>
                             <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg> Dapibus ac facilisis in</li>
+                                </svg> Includes 1 HOUR On-Site</li>
                             <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg> Vestibulum at eros</li>
+                                </svg>Arrive Within 30mins of the Booked</li>
+                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg>Time or receive 10% Off</li>
+                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg>Existing Clients 10% Off</li>
                         </ul>
                         <div class="card-body text-center">
-                            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                            <button class="btn btn btn-light btn-lg  ">Select</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-<div class=" container-fluid2 ">
-            <div class="container review-section">
-            
+    </div>
+    <div class=" container-fluid2 ">
+        <div class="container review-section">
+
             <!-- Review Section -->
-            <h2 class="text-center my-4">Customer Reviews</h2>
+           
             <div class="row">
                 <!-- Review Card 1 -->
                 <div class="col-md-4">
@@ -424,12 +512,14 @@
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
                             </div>
-                            <h5 class="card-title">Customer Name 1</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                          
+                            <p class="card-text mt-3">“Josh was on time, friendly and very knowledgeable. He explained what
+                                he was doing and why he was doing it. He contacted me the next day to make sure
+                                everything was still working as it should.”</p>
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- Review Card 2 -->
                 <div class="col-md-4">
                     <div class="card review-card">
@@ -441,12 +531,14 @@
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
                             </div>
-                            <h5 class="card-title">Customer Name 2</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                           
+                            <p class="card-text mt-3">“We used your services due to needing an onsite service for one of our
+                                remote clients. We were very happy with the service given and would use your mobile
+                                service in the future if needed.”</p>
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- Review Card 3 -->
                 <div class="col-md-4">
                     <div class="card review-card">
@@ -458,8 +550,10 @@
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
                             </div>
-                            <h5 class="card-title">Customer Name 3</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                          
+                            <p class="card-text mt-3">“Sean was very knowledgeable and I would certainly recommend him to
+                                colleagues and clients. Business Systems were taking ages to start up and Sean had the
+                                tools to advise what was required.”</p>
                         </div>
                     </div>
                 </div>
@@ -467,42 +561,43 @@
         </div>
     </div>
 
-        <!-- Contact Form Section -->
-        <div class="container contact-form">
-            <!-- Add your contact form here -->
-            <h2 class="text-center my-4">Contact Us</h2>
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                     
-                        <input type="text" class="form-control custom-input" id="inputName" placeholder=" Name">
-                    </div>
-                    <div class="form-group col-md-6">
-                      
-                        <input type="email" class="form-control custom-input" id="inputEmail" placeholder=" Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                  
-                    <textarea class="form-control custom-input" id="inputMessage" rows="4" placeholder=" Message"></textarea>
-                </div>
-                <div class="row justify-content-end">
-                    <div class="col-md-2 form-group">
-                        <label for="inputMath">What is 4 + 5?</label>
-                    </div>
-                    <div class="col-md-1 form-group">
-                        <input type="text" class="form-control custom-input  col-1" id="inputMath" >
-                    </div>
-                    <button type="submit" class="btn btn-outline-primary">Submit</button>
-                </div>
-               
-            </form>
-        </div>
+    <!-- Contact Form Section -->
+    <div class="container contact-form mb-6" style="margin-bottom: 50px;">
+        <!-- Add your contact form here -->
+        <h2 class=" my-4">Contact Us</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
 
-        <!-- JavaScript dependencies -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                    <input type="text" class="form-control custom-input" id="inputName" placeholder=" Name">
+                </div>
+                <div class="form-group col-md-6">
+
+                    <input type="email" class="form-control custom-input" id="inputEmail" placeholder=" Email">
+                </div>
+            </div>
+            <div class="form-group">
+
+                <textarea class="form-control custom-input" id="inputMessage" rows="4"
+                    placeholder=" Message"></textarea>
+            </div>
+            <div class="row justify-content-end ">
+                <div class="col-md-2 form-group">
+                    <label for="inputMath">What is 4 + 5?</label>
+                </div>
+                <div class="col-md-1 form-group">
+                    <input type="text" class="form-control custom-input  col-1" id="inputMath">
+                </div>
+                <button type="submit" class="btn btn-outline-primary" style="margin-right: 15px;">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 
