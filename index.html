@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Page Title</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- Google Fonts - Open Sans and Arial -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Arial:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.7em;
+            font-weight: 500;
+        }
+
+        /* Add your custom styles here */
+        .hero-section {
+            background-image: linear-gradient(140deg, #2b3990 0%, rgba(255, 255, 255, 0.76) 100%), url('https://img.freepik.com/free-photo/smiling-woman-showing-laptop_23-2147626307.jpg?w=996&t=st=1705061670~exp=1705062270~hmac=322e3a7355e646ca80fd4f975b10c34a5dfe8d626f2b1a669a40bba14a76e422');
+            background-size: cover;
+            background-position: center;
+            text-align: left;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .hero-text {
+            width: 53.25%;
+        }
+
+        h1.display-4 {
+            font-family: 'IBM Plex Sans Condensed', 'Helvetica', 'Arial', 'Lucida', sans-serif;
+            font-weight: 700;
+            font-size: 6vw !important;
+            color: #FFFFFF !important;
+            line-height: 1.2em;
+            text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4);
+        }
+
+        p.lead {
+            line-height: 2em;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 2em;
+            text-shadow: 0.23em 0.08em 0.47em #000000;
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .container-fluid1 {
+            background-image:  url('https://geek-mobile.com.au/wp-content/uploads/2022/09/eed315c94e949729cfaeb5103f3ec7b5.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .container-fluid2 {
+            background-image:  url('https://img.freepik.com/free-photo/modern-laptop-white-background-3d-rendering-computer-generated-image_1142-50487.jpg?t=st=1705074736~exp=1705078336~hmac=93e13296a55054be1d6e622f3ef5aa34edfb7d61e747598fa79d9e6040a6ea2a&w=740');
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .hero-section .btn-group-vertical {
+            flex-direction: column;
+        }
+
+        .hero-section .btn-group-vertical .btn {
+            margin-bottom: 5.82%;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0.3em 1em;
+            line-height: 1.7em !important;
+            background-color: transparent;
+            background-size: cover;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            border: 2px solid;
+            border-radius: 3px;
+            -webkit-transition-duration: .2s;
+            transition-duration: .2s;
+            -webkit-transition-property: all !important;
+            transition-property: all !important;
+            width: auto;
+        }
+
+        .hero-section .btn-group-vertical .btn:nth-child(1) {
+            background-color: #7CDA24;
+            /* Color for Button 1 */
+        }
+
+        .hero-section .btn-group-vertical .btn:nth-child(2) {
+            background-color: #E09900;
+            /* Color for Button 2 */
+        }
+
+        .hero-section .btn-group-vertical .btn:nth-child(3) {
+            background-color: #2b3990;
+            /* Color for Button 3 */
+        }
+
+        .hero-section .btn-group-vertical .btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section .btn-group-vertical .btn:hover {
+            padding: 0.3em 2em 0.3em 0.7em;
+            border: 2px solid transparent;
+            margin-right: -0.3em -2em -0.3em -0.7em;
+        }
+
+        .hero-section .btn-group-vertical .btn::after {
+            content: '\f054';
+            /* Font Awesome chevron-right icon */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            /* Adjust font-weight if necessary */
+            font-size: 16px;
+            /* Adjust font-size if necessary */
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+            transition: left 300ms ease, opacity 300ms ease;
+            margin-left: -100%;
+            /* Initial position outside the button */
+            color: #fff;
+            /* Set the color of the icon */
+        }
+
+        .hero-section .btn-group-vertical .btn:hover::after {
+            opacity: 1;
+            margin-left: 16px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero-section button {
+            margin-right: 10px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: moveRight 1s ease-out 3s forwards, rotate 2s linear 3s forwards;
+        }
+
+        @keyframes moveRight {
+            from {
+                transform: translate(-50%, -50%);
+            }
+
+            to {
+                left: 80%;
+                /* Adjust the final position */
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .container {
+            width: 80%;
+            /* Set width to 80% */
+            margin: auto;
+            /* Center the container with auto margins */
+        }
+
+
+        .top-menu {
+            background-color: #2b3990;
+            font-size: 12px;
+        }
+
+        .top-menu span {
+            color: white;
+        }
+
+        .custom-navbar {
+            background-color: white;
+            font-size: 14px;
+            color: #00000099;
+
+        }
+
+        .card2 {
+            border-radius: 10px;
+            padding: 10px 50px;
+            box-shadow: 0px 46px 47px 0px #fbb040 !important;
+        }
+
+        .card1 {
+            border-radius: 10px;
+            padding: 30px 50px;
+            background-image: linear-gradient(137deg, #fbb040 0%, #ffffff 100%);
+            box-shadow: 0px 56px 56px -24px #2b3990 !important;
+            margin-left: -46px;
+    margin-top: -14px;
+
+        }
+
+        .card::after {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .card:hover {
+
+
+            transform: scale(1.02, 1.02);
+            -webkit-transform: scale(1.02, 1.02);
+            backface-visibility: hidden;
+            will-change: transform;
+            /* box-shadow: 0 1rem 3rem rgba(0,0,0,.75) !important; */
+        }
+
+        .card:hover::after {
+            opacity: 1;
+        }
+
+        .card:hover .btn-outline-primary {
+            color: white;
+            background: #007bff;
+        }
+        .list-group-item{
+            background: transparent;
+        }
+        .star-rating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #f1c40f; /* Yellow color for the stars */
+}
+
+.star {
+    font-size: 1.5em;
+}
+/* Add this to your existing styles */
+.custom-input {
+    -webkit-appearance: none;
+    background-color: #eee;
+    width: 100%;
+    border-width: 0;
+    border-radius: 0;
+    color: #999;
+    font-size: 14px;
+    padding: 16px;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Menu -->
+    <div class="top-menu text-light text-center p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="mr-3"><i class="fa fa-phone"></i> +1 (123) 456-7890</span>
+                    <span><i class="fas fa-envelope"></i> info@example.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light  custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- Your logo goes here -->
+                <img src="https://mrgeeks.com.au/img/logo.png" alt="Your Logo" width="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <!-- Add your navigation links here -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="hero-text">
+                <h1 class="display-4">Join 70k+ Happy Clients</h1>
+                <p class="lead">Your hero subheading</p>
+                <p class="lead">Another hero subheading</p>
+                <div class="btn-group-vertical">
+                    <button class="btn btn-primary">Call Now</button>
+                    <button class="btn btn-secondary">Book Online</button>
+                    <button class="btn btn-info">Get The App</button>
+                </div>
+            </div>
+        </div>
+        <img src="https://mrgeeks.com.au/img/logo.png" class="logo" alt="Your Logo" width="150">
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="container-fluid container-fluid1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-6">
+                    <div class="card2 h-300 shadow-lg">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <h5 class="card-title">Standard</h5>
+                                <small>Small Business</small>
+                                <br><br>
+                                <span class="h2">$20</span>/month
+                                <br><br>
+                            </div>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Cras justo odio</li>
+                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Dapibus ac facilisis in</li>
+                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body text-center">
+                            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-6">
+                    <div class="card1 h-100 shadow-lg">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <h5 class="card-title">Premium</h5>
+                                <small>Large Companies</small>
+                                <br><br>
+                                <span class="h2">$40</span>/month
+                                <br><br>
+                            </div>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Cras justo odio</li>
+                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Dapibus ac facilisis in</li>
+                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body text-center">
+                            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+<div class=" container-fluid2 ">
+            <div class="container review-section">
+            
+            <!-- Review Section -->
+            <h2 class="text-center my-4">Customer Reviews</h2>
+            <div class="row">
+                <!-- Review Card 1 -->
+                <div class="col-md-4">
+                    <div class="card review-card">
+                        <div class="card-body">
+                            <div class="star-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h5 class="card-title">Customer Name 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Review Card 2 -->
+                <div class="col-md-4">
+                    <div class="card review-card">
+                        <div class="card-body">
+                            <div class="star-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h5 class="card-title">Customer Name 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Review Card 3 -->
+                <div class="col-md-4">
+                    <div class="card review-card">
+                        <div class="card-body">
+                            <div class="star-rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <h5 class="card-title">Customer Name 3</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Contact Form Section -->
+        <div class="container contact-form">
+            <!-- Add your contact form here -->
+            <h2 class="text-center my-4">Contact Us</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                     
+                        <input type="text" class="form-control custom-input" id="inputName" placeholder=" Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                      
+                        <input type="email" class="form-control custom-input" id="inputEmail" placeholder=" Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                  
+                    <textarea class="form-control custom-input" id="inputMessage" rows="4" placeholder=" Message"></textarea>
+                </div>
+                <div class="row justify-content-end">
+                    <div class="col-md-2 form-group">
+                        <label for="inputMath">What is 4 + 5?</label>
+                    </div>
+                    <div class="col-md-1 form-group">
+                        <input type="text" class="form-control custom-input  col-1" id="inputMath" >
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                </div>
+               
+            </form>
+        </div>
+
+        <!-- JavaScript dependencies -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
