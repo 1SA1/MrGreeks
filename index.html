@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Your Page Title</title>
+    <title>Book Appointment</title>
 
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -26,7 +28,7 @@
 
         /* Add your custom styles here */
         .hero-section {
-            background-image: linear-gradient(140deg, #2b3990 0%, rgba(255, 255, 255, 0.76) 100%), url('https://img.freepik.com/free-photo/smiling-woman-showing-laptop_23-2147626307.jpg?w=996&t=st=1705061670~exp=1705062270~hmac=322e3a7355e646ca80fd4f975b10c34a5dfe8d626f2b1a669a40bba14a76e422');
+            background-image: linear-gradient(140deg, #f69323 0%, rgba(255, 255, 255, 0.76) 100%), url('https://img.freepik.com/free-photo/smiling-woman-showing-laptop_23-2147626307.jpg?w=996&t=st=1705061670~exp=1705062270~hmac=322e3a7355e646ca80fd4f975b10c34a5dfe8d626f2b1a669a40bba14a76e422');
             background-size: cover;
             background-position: center;
             text-align: left;
@@ -233,7 +235,7 @@
 
 
         .top-menu {
-            background-color: #2b3990;
+            background-color: #f69323;
             font-size: 12px;
         }
 
@@ -263,7 +265,7 @@
     background-image: linear-gradient(137deg, #fbb040 0%, #ffffff 100%);
     box-shadow: 0px 36px 36px -16px #2b3990 !important; /* Adjust box shadow for smaller screens */
     margin-left: -36px;
-    margin-top: -70px;  /* Adjust margin for smaller screens */
+    margin-top: -70px; /* Adjust margin for smaller screens */
     text-align: center; /* Center the text */
 }
 
@@ -349,8 +351,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <span class="mr-3"><i class="fa fa-phone"></i> +1 (123) 456-7890</span>
-                    <span><i class="fas fa-envelope"></i> info@example.com</span>
+                    <a style="color: white;" class="mr-3" href="tel:1300290208"><i class="fa fa-phone"></i>1300 290 208 </a>
+                    <a  style="color: white;" href="mailto:admin@mrgeeks.com.au"><i class="fas fa-envelope"></i> admin@mrgeeks.com.au</a>
                 </div>
             </div>
         </div>
@@ -386,9 +388,10 @@
                 <p class="lead">Your hero subheading</p>
                 <p class="lead">Another hero subheading</p>
                 <div class="btn-group-vertical">
-                    <button class="btn btn-primary">Call Now</button>
-                    <button class="btn btn-secondary">Book Online</button>
-                    <button class="btn btn-info">Get The App</button>
+                    <button onclick="window.location.href='tel:1300290208'" class="btn btn-primary">Call US</button>
+                    <button onclick="window.location.href='mailto:admin@mrgeeks.com.au'" class="btn btn-secondary">Email Us</button>                    
+                    <button href="https://mrgeeks.com.au/" class="btn btn-info">Free Quote Button</button>
+                   
                 </div>
             </div>
             <img src="https://mrgeeks.com.au/img/logo.png" class="logo img-fluid text-center" alt="Your Logo"
@@ -430,12 +433,12 @@
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
                                 </svg> Credit Card Surcharge</li>
-                            <li class="list-group-item" style=" text-decoration: line-through;"><svg
+                            <li class="list-group-item" ><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-check" viewBox="0 0 16 16">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg> Call Out Fee</li>
+                                </svg>No Hidden Fee & No Extra Charge on Weekend</li>
                             <li class="list-group-item" style=" text-decoration: line-through;"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-check" viewBox="0 0 16 16">
@@ -444,7 +447,7 @@
                                 </svg> Cancellation Fee</li>
                         </ul>
                         <div class="card-body text-center">
-                            <button class="btn btn-light btn-lg" style="background:#fbb040">Select</button>
+                            <button onclick="window.location.href='tel:1300290208'" class="btn btn-light btn-lg" style="background:#fbb040">Quick Support</button>
                         </div>
                     </div>
                 </div>
@@ -453,7 +456,7 @@
                         <div class="card-body">
                             <div class="text-center p-3">
 
-                                <small>REMOTE AVAILABLE FROM $68</small>
+                                <small>Remote Support( Quick Help )</small>
                                 <br><br>
                                 <span class="h2">ONSITE
                                     <br><br>
@@ -480,7 +483,7 @@
                                     fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg>Time or receive 10% Off</li>
+                                </svg>Pensioners Discount</li>
                             <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                     <path
@@ -488,7 +491,7 @@
                                 </svg>Existing Clients 10% Off</li>
                         </ul>
                         <div class="card-body text-center">
-                            <button class="btn btn btn-light btn-lg  ">Select</button>
+                            <button onclick="window.location.href='tel:1300290208'" class="btn btn btn-light btn-lg  ">Quick Support</button>
                         </div>
                     </div>
                 </div>
@@ -598,6 +601,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function triggerPostMessage() {
+  window.opener.postMessage('openContactForm', 'https://mrgeeks.com.au/');
+}
+    </script>
 
 </body>
 
